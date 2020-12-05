@@ -1,0 +1,1205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="qrichtext" content="1" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'Consolas'; font-size:10pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">IPython 7.16.1 -- An enhanced Interactive Python.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#00ff00;">In [</span><span style=" font-weight:600; color:#00ff00;">1</span><span style=" color:#00ff00;">]:</span> runfile('C:/Users/Ahmad/Dropbox/EE104/Super_Project_4_Option_4_Ary_Ghanizadah_Kopelman_New/4.2-4.4/Database_Prediction_Multiple.py', wdir='C:/Users/Ahmad/Dropbox/EE104/Super_Project_4_Option_4_Ary_Ghanizadah_Kopelman_New/4.2-4.4')</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:31.258559: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4.3/4.4 Database Prediction Program</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This program was built on top of the 'Option_4_1_Prediction.py' file from the 4.1 alternative CIFAR-10 tutorial</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">*Note: Images are generic images saved from Google Images*          </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This program processes multiple images in our database.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">How many images would you like to process?</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Enter a number '1' to '20':5</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">There are 20 sample image files.      </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Which would you like to view?</p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">    Choices are:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        1-2:   Airplane</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        3-4:   Automobile</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        5-6:   Bird</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        7-8:   Cat</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        9-10:  Deer</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        11-12: Dog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        13-14: Frog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        15-16: Horse</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        17-18: Ship</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        19-20: Truck    </p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type '1' through '20' for the files:1</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:31.258559: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.437218: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library nvcuda.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.461546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">pciBusID: 0000:01:00.0 name: GeForce GTX 1060 3GB computeCapability: 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">coreClock: 1.7085GHz coreCount: 9 deviceMemorySize: 3.00GiB deviceMemoryBandwidth: 178.99GiB/s</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.461594: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.467258: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.471223: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.472967: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.478322: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.482094: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.492653: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.492745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.493195: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501733: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x14e4fc56140 initialized for platform Host (this does not guarantee that XLA will be used). Devices:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501766: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">pciBusID: 0000:01:00.0 name: GeForce GTX 1060 3GB computeCapability: 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">coreClock: 1.7085GHz coreCount: 9 deviceMemorySize: 3.00GiB deviceMemoryBandwidth: 178.99GiB/s</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501947: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501957: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501967: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501981: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501992: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502005: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502017: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502118: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">WARNING:tensorflow:From C:\Users\Ahmad\Dropbox\EE104\Super_Project_4_Option_4_Ary_Ghanizadah_Kopelman_New\4.2-4.4\Database_Prediction_Multiple.py:112: Sequential.predict_classes (from tensorflow.python.keras.engine.sequential) is deprecated and will be removed after 2021-01-01.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Instructions for updating:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please use instead:* `np.argmax(model.predict(x), axis=-1)`,   if your model does multi-class classification   (e.g. if it uses a `softmax` last-layer activation).* `(model.predict(x) &gt; 0.5).astype(&quot;int32&quot;)`,   if your model does binary classification   (e.g. if it uses a `sigmoid` last-layer activation).</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:31.258559: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.437218: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library nvcuda.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.461546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">pciBusID: 0000:01:00.0 name: GeForce GTX 1060 3GB computeCapability: 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">coreClock: 1.7085GHz coreCount: 9 deviceMemorySize: 3.00GiB deviceMemoryBandwidth: 178.99GiB/s</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.461594: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.467258: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.471223: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.472967: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.478322: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.482094: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.492653: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.492745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.493195: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501733: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x14e4fc56140 initialized for platform Host (this does not guarantee that XLA will be used). Devices:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501766: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">pciBusID: 0000:01:00.0 name: GeForce GTX 1060 3GB computeCapability: 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">coreClock: 1.7085GHz coreCount: 9 deviceMemorySize: 3.00GiB deviceMemoryBandwidth: 178.99GiB/s</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501947: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501957: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501967: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501981: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501992: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502005: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502017: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502118: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147948: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2094 MB memory) -&gt; physical GPU (device: 0, name: GeForce GTX 1060 3GB, pci bus id: 0000:01:00.0, compute capability: 6.1)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.150896: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x14e7e17b640 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.150918: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1060 3GB, Compute Capability 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.572139: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.786865: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">WARNING:tensorflow:From C:\Users\Ahmad\Dropbox\EE104\Super_Project_4_Option_4_Ary_Ghanizadah_Kopelman_New\4.2-4.4\Database_Prediction_Multiple.py:116: Sequential.predict_proba (from tensorflow.python.keras.engine.sequential) is deprecated and will be removed after 2021-01-01.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Instructions for updating:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please use `model.predict()` instead.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:31.258559: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.437218: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library nvcuda.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.461546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">pciBusID: 0000:01:00.0 name: GeForce GTX 1060 3GB computeCapability: 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">coreClock: 1.7085GHz coreCount: 9 deviceMemorySize: 3.00GiB deviceMemoryBandwidth: 178.99GiB/s</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.461594: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.467258: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.471223: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.472967: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.478322: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.482094: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.492653: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.492745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.493195: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501733: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x14e4fc56140 initialized for platform Host (this does not guarantee that XLA will be used). Devices:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501766: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">pciBusID: 0000:01:00.0 name: GeForce GTX 1060 3GB computeCapability: 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">coreClock: 1.7085GHz coreCount: 9 deviceMemorySize: 3.00GiB deviceMemoryBandwidth: 178.99GiB/s</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501947: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501957: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501967: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501981: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.501992: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502005: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502017: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:36.502118: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.147948: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2094 MB memory) -&gt; physical GPU (device: 0, name: GeForce GTX 1060 3GB, pci bus id: 0000:01:00.0, compute capability: 6.1)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.150896: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x14e7e17b640 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.150918: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1060 3GB, Compute Capability 6.1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.572139: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:37.786865: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2020-12-04 20:09:38.664885: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: Invoking GPU asm compilation is supported on Cuda non-Windows platforms only</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Relying on driver to perform ptx compilation. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Modify $PATH to customize ptxas location.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This message will be only logged once.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">You have chosen to sample image: airplane_1_converted </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please wait for the image prediction....</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Prediction:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Airplane: 100.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Automobile: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Bird: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Cat: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Deer: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Dog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Frog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Horse: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ship: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Truck: 0.0 %</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Classes from 0 to 9: ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image falls under class: 0 </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This image is an airplane.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+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
+" /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">There are 20 sample image files.      </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Which would you like to view?</p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">    Choices are:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        1-2:   Airplane</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        3-4:   Automobile</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        5-6:   Bird</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        7-8:   Cat</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        9-10:  Deer</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        11-12: Dog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        13-14: Frog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        15-16: Horse</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        17-18: Ship</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        19-20: Truck    </p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type '1' through '20' for the files:2</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">You have chosen to sample image: airplane_2_converted </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please wait for the image prediction....</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Prediction:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Airplane: 100.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Automobile: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Bird: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Cat: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Deer: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Dog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Frog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Horse: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ship: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Truck: 0.0 %</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Classes from 0 to 9: ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image falls under class: 0 </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This image is an airplane.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+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
+" /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">There are 20 sample image files.      </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Which would you like to view?</p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">    Choices are:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        1-2:   Airplane</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        3-4:   Automobile</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        5-6:   Bird</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        7-8:   Cat</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        9-10:  Deer</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        11-12: Dog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        13-14: Frog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        15-16: Horse</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        17-18: Ship</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        19-20: Truck    </p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type '1' through '20' for the files:3</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">You have chosen to sample image: automobile_1_converted </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please wait for the image prediction....</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Prediction:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Airplane: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Automobile: 100.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Bird: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Cat: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Deer: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Dog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Frog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Horse: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ship: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Truck: 0.0 %</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Classes from 0 to 9: ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image falls under class: 1 </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This image is an automobile.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+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
+AAAASUVORK5CYII=
+" /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">There are 20 sample image files.      </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Which would you like to view?</p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">    Choices are:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        1-2:   Airplane</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        3-4:   Automobile</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        5-6:   Bird</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        7-8:   Cat</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        9-10:  Deer</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        11-12: Dog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        13-14: Frog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        15-16: Horse</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        17-18: Ship</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        19-20: Truck    </p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type '1' through '20' for the files:4</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">You have chosen to sample image: automobile_2_converted </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please wait for the image prediction....</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Prediction:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Airplane: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Automobile: 100.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Bird: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Cat: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Deer: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Dog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Frog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Horse: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ship: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Truck: 0.0 %</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Classes from 0 to 9: ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image falls under class: 1 </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This image is an automobile.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+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
+AAAAAElFTkSuQmCC
+" /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">There are 20 sample image files.      </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Which would you like to view?</p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">    Choices are:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        1-2:   Airplane</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        3-4:   Automobile</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        5-6:   Bird</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        7-8:   Cat</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        9-10:  Deer</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        11-12: Dog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        13-14: Frog</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        15-16: Horse</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        17-18: Ship</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        19-20: Truck    </p>
+<br/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type '1' through '20' for the files:5</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">WARNING:tensorflow:5 out of the last 9 calls to &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000014E668B6C10&gt; triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">You have chosen to sample image: bird_1_converted </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Please wait for the image prediction....</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Prediction:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Airplane: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Automobile: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Bird: 100.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Cat: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Deer: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Dog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Frog: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Horse: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ship: 0.0 %</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Truck: 0.0 %</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image Classes from 0 to 9: ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Image falls under class: 2 </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">This image is a bird.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAPsAAAD5CAYAAADhukOtAAAACXBIWXMAAAsS
+AAALEgHS3X78AAAAOnpUWHRTb2Z0d2FyZQAACJnLTSwpyMkvyclMUihLLSrO
+zM8z1jPSM9JRyCgpKbDS18+Fy+vlF6XrAwCcHBDTf6tvOAAAH59JREFUeJzt
+nW1sVOeZ9//nzJvfsXmxGWPA8UISAzYumLCVIj9tvKQV2xIlVIQ0VRyZxlI+
+RUnaKt8CUpUgVZGoRKQnTvMB5ZGIkg8Jq6Rl06al7fIkjzsJZheSTVwHN8YY
+G+MX/Dqel/N8YMuWzf2/B8b2mOb8f5/gXL7uc899zjVn5v7PdV2O53kehBBf
+edzFnoAQIjco2IXwCQp2IXyCgl0In6BgF8InKNiF8AnBuTgfP34cTzzxBFKp
+FH74wx/imWeesf59QUEEpaWFRpvjcD/HZswG23jzrEQ6Lj+X7XU5lrdhqx8x
+Zbu+2doY1tW1rH3aZkvfvM2mOGdvoyarkVmyUcXHRqcwPTlrtDnZ6uypVAq3
+3347fv3rX6Oqqgrbtm3D0aNHsWHDBupTWbkUbW3NRlsoFKB+gYD5zndcHhGO
+JVpsN6ntxmFLZQvoUIS/nwYj/DWHI3z+QYstHDbbgiHLeJa1Dwa5LRQKURtb
+kXSKuiBlWfuZeILapqfNN7fNZhtvNsFtyQR/AalU2mLjfgli89I3P97/+d//
+hot9o0Zb1h/jOzo6sG7dOtTU1CAcDmPv3r04duxYtsMJIRaYrIO9r68Pq1ev
+vvb/qqoq9PX1zcukhBDzT9bf2U0faU0fj9vb29He3g4AmJqKZ3s6IcQcyfrJ
+XlVVhd7e3mv/P3/+PCorK7/0d21tbYjFYojFYigoiGR7OiHEHMk62Ldt24au
+ri6cO3cOs7OzeO2117Br1675nJsQYh7J+mN8MBjE4cOH8a1vfQupVAqtra3Y
+uHFjBi8PHhEa0h7feXTI3q5rFRL4eJ7H3+NsEg/bjbe+Yzp8PKtyZZXKbDaz
+0a5c8B13N0vFg4/HbbZ7wLWcK2AZlCk57DgABNI2tYbbPI/bLBv1cEhMWIaz
+3h+MOensO3fuxM6dO+cyhBAiR+gXdEL4BAW7ED5BwS6ET1CwC+ETFOxC+IQ5
+7cZnA1O2bAkoDrE5AYv0ZtUtLFikN55RZskMy0YjsZwr45hZZKI5bpLaAm4+
+tQUDXLJLkyQOzzI/myxnk8psyTrMFrIkpqTSfDxb3pht5W1yL7VZ5uhlI3ve
+tIcQ4u8SBbsQPkHBLoRPULAL4RMU7EL4hJzvxvOKW9a9TPNRy467PYHDkuhg
+2TVlU8/2XPad+ixtZI62c7ngCUwjo2XUNjlxmdrWrrlgPB4I2BKULKXJXL4L
+bhszGDTf4ta6dVZFxjIPqxJiq0FHEqysw5l36m1T0JNdCJ+gYBfCJyjYhfAJ
+CnYhfIKCXQifoGAXwifkXHqjNdKyKMhmc7HVJcsWpvS5WbdIys5ml/PMFOT9
+I/dx/4HaXMfcXQQABgcnqC05W2w8XrvhCvWx5H1Y5c2AJSEnFCKSl70PleVc
+ljpzAcsLsJ2QSH1Jy+3BpUObxCqE8AUKdiF8goJdCJ+gYBfCJyjYhfAJCnYh
+fMKcpLfq6moUFxcjEAggGAwiFotl8HAsteFuPjvM1hLIXqaN+9laSjFLtllv
+dj9bHbRZaiss3GY8nkxWUZ/JCXOGGgAU5PMadOtqyqnts88mjcfHRmeoT1Fx
+gtrS6Ztv8QQAIZZJZ81s42ERTPHrmbSkqdlq19FMRVtyI0n0s91vc9bZf/e7
+32H58uVzHUYIscDoY7wQPmFOwe44Du69915s3boV7e3t8zUnIcQCMKeP8SdP
+nkRlZSUGBwexY8cO3HnnnWhqarrub9rb26+9EUxNxedyOiHEHJjTk72yshIA
+UF5ejvvvvx8dHR1f+pu2tjbEYjHEYjEUFETmcjohxBzIOtgnJycxPj5+7d/v
+vvsuNm3aNG8TE0LML1l/jB8YGMD9998PAEgmk/j+97+Pb3/72xn9ssl6y8rH
+IoPY2/Rwm0vGdC3Sj01ec10ur7kOL6IYCXMZDVhjPBpPTlOP8WkueZ3tPEVt
+F859Sm2bNpuz7Gan+OqHllITkglL+ydL1hu7oNbCorBcF4sbuz+uTsMi6bJW
+WUxfA8+ws8l1WQd7TU0NTp8+na27ECLHSHoTwico2IXwCQp2IXyCgl0In6Bg
+F8In3DoFJ7Pwsfc8s6W9ZXMuy9wtkotrkYVcS4+yUJAnF81MRant4uDn5vHC
+edQnkreM2lasqqG2M6f+RG2/fudt4/EtTV+jPv9UuYLaAgFe3BKWLEaPSGxB
+i/TmWKQ3opIBsBceTaUsRTGD5rmkUjcvN9riSE92IXyCgl0In6BgF8InKNiF
+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
+CJ+gYBfCJ+S0Bt3kNPCLo/8O4Kp+v2KFuV5aLtE8NI+v0jyGx3gNRXiLxNat
+Wxfr1NeheVyP5nE9X6V56GO8ED5BwS6ETwjs379//2KdfOvWrYt16uvQPK5H
+87ier8o8HM/z+A96hRBfGfQxXgifsCjBfvz4cdxxxx1Yt27dotauq66uRl1d
+HRoaGtDY2Jiz87a2tqK8vBybNm26dmx4eBg7duzA+vXrsWPHDoyM8LZRCzmP
+/fv3Y9WqVWhoaEBDQwN++ctfLvg8ent78c1vfhO1tbXYuHEjfv7znwPI/Zqw
+eeR6TWZmZnDXXXdh8+bN2LhxI5599lkA87Aec97Pv0mSyaRXU1PjdXd3e/F4
+3Kuvr/fOnj2b62l4nud5a9eu9S5dupTz8/7+97/3PvzwQ2/jxo3Xjv34xz/2
+nn/+ec/zPO/555/3fvKTnyzKPJ599lnvZz/72YKf+2+5cOGC9+GHH3qe53lX
+rlzx1q9f7509ezbna8Lmkes1SafT3vj4uOd5njc7O+vddddd3vvvvz/n9cj5
+k72jowPr1q1DTU0NwuEw9u7di2PHjuV6GotKU1MTli5det2xxSjgaZrHYhCN
+RrFlyxYAQHFxMWpra9HX15fzNWHzyDULVeQ158He19eH1atXX/t/VVXVoiwo
+cHVR7733XmzduhXt7e2LMoe/cisV8Dx8+DDq6+vR2tqak68Tf0tPTw9OnTq1
+6EVN/3YeQO7XZCGKvOY82D3D5r+tsP1CcvLkSXz00Uf41a9+hRdffBF/+MMf
+FmUetxKPP/44uru70dnZiWg0iqeffjpn556YmMDu3btx6NAhlFgq9eR6Houx
+JnMp8srIebBXVVWht7f32v/Pnz+PysrKXE8DAK6dt7y8HPfffz86OjoWZR4A
+briAZy7mEQgE4LouHnvssZytSSKRwO7du/Hwww/jgQceuDaXXK8Jm8dirAmQ
+XZFXRs6Dfdu2bejq6sK5c+cwOzuL1157Dbt27cr1NDA5OYnx8fFr/3733Xev
+25XONbdKAc+/3kwA8Oabb+ZkTTzPw759+1BbW4unnnrq2vFcrwmbR67XZMGK
+vM7vPuKN8c4773jr16/3ampqvJ/+9KeLMQWvu7vbq6+v9+rr670NGzbkdB57
+9+71Vq5c6QWDQW/VqlXeL37xC29oaMi75557vHXr1nn33HOPd/ny5UWZxw9+
+8ANv06ZNXl1dnffd737Xu3DhwoLP449//KMHwKurq/M2b97sbd682XvnnXdy
+viZsHrlek9OnT3sNDQ1eXV2dt3HjRu/AgQOe53lzXg/9gk4In6Bf0AnhExTs
+QvgEBbsQPkHBLoRPULAL4RMU7EL4BAW7ED5BwS6ET/j/pZ06te631BwAAAAA
+SUVORK5CYII=
+" /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">--- 32.18932890892029 seconds ---</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#00ff00;">In [</span><span style=" font-weight:600; color:#00ff00;">2</span><span style=" color:#00ff00;">]:</span> </p></body></html>
